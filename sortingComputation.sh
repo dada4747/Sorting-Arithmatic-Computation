@@ -51,3 +51,9 @@ done
 echo "Array in sorted in ascending order :"
 echo ${arr2[*]}
 
+
+echo -e "\nSorted Numbers "
+for ((i=0;i<4;i++))
+do
+	echo ${arr2[$i]}
+done

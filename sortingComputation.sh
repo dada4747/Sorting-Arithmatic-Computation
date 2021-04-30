@@ -31,3 +31,23 @@ do
 done
 echo "Dictionary to Array:"
 echo "${arr2[*]}"
+
+
+for ((i = 0; i<5; i++))
+do
+
+    for((j = 0; j<5-i-1; j++))
+    do
+        if [ ${arr2[j]} -gt ${arr2[$((j+1))]} ]
+        then
+            # swap
+            temp=${arr2[j]}
+            arr2[$j]=${arr2[$((j+1))]}
+            arr2[$((j+1))]=$temp
+        fi
+    done
+done
+
+echo "Array in sorted in ascending order :"
+echo ${arr2[*]}
+
